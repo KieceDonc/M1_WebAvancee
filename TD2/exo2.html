@@ -1,0 +1,36 @@
+﻿<script src ="https://unpkg.com/vue@3"></script>
+
+<form>
+    <div id="app">
+        <form>
+            <h1>TODO List</h1>
+            
+            <input type="text" v-model="todo">
+            <br />
+            <input type="button" id="add" value="add" v-on:click="onClick()" />
+            <div id="todolist">
+
+            </div>
+        </form>
+    </div>
+</form>
+
+<script>
+    const { createApp } = Vue
+    createApp({
+        data() {
+            return {
+              todo: 'test',
+            };
+          },
+        methods: {
+            onClick() {
+                var parent = document.getElementById('todolist');
+                var p = document.createElement("p");
+                p.innerHTML = this.todo;
+                parent.appendChild(p)
+            }
+        }
+    }).mount('#app')
+
+</script>
