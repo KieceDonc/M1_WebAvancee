@@ -1,4 +1,4 @@
 <div>
-    <app-pizza-list (pizzaChanged)="changeItem($event)"></app-pizza-list>
-    <app-pizza-detail class="col-7"></app-pizza-detail>
+    <app-pizza-list (pizzaChanged)="onPizzaChanged($event)"></app-pizza-list>
+    <app-pizza-detail [pizza]="currentPizza"></app-pizza-detail>
 </div>

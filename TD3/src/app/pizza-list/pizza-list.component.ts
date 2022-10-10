@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Pizza } from '../pizza';
 
 @Component({
@@ -7,7 +7,7 @@ import { Pizza } from '../pizza';
   styleUrls: ['./pizza-list.component.css']
 })
 export class PizzaListComponent implements OnInit {
-
+  
   @Output() pizzaChanged = new EventEmitter<Pizza>();
 
   public pizzas : Pizza[] = [

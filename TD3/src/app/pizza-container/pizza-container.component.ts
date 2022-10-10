@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pizza } from '../pizza';
 
 @Component({
   selector: 'app-pizza-container',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzaContainerComponent implements OnInit {
 
-  constructor() { }
+  public currentPizza: Pizza;
+    
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
 
+  onPizzaChanged(pizza): void {
+    this.currentPizza = pizza;
+  }
 }
