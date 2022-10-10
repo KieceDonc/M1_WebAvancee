@@ -1,0 +1,14 @@
+<div class="row">
+<div class="list-group col-12" >
+<a *ngFor="let pizza of pizzas" (click)="onClick(pizza)" href="#" class="list-group-item list-group-item-action"> 
+{{pizza.name}}
+</a>
+</div>
+<hr>
+<div class="row">
+	<button class="btn btn-success col-12">
+		
+	Ajouter une Pizza
+	</button>
+
+</div>
