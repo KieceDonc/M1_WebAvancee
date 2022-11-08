@@ -8,6 +8,7 @@ import { Pizza } from '../models/pizza.model';
 export class PizzaService {
 
   public pizza: BehaviorSubject<Pizza>;
+  public pizzaHighlighted : HTMLElement;
   private pizzas : Pizza[];
   
   constructor() {
