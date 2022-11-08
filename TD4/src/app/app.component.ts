@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { Pizza } from './pizza';
+import { Pizza } from './shared/models/pizza.model';
 
 @Component({
   selector: 'app-root',

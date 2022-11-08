@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Pizza } from '../shared/models/pizza.model';
-import { PizzaService } from '../shared/services/pizza.service';
+import { Pizza } from '../pizza';
 
 @Component({
   selector: 'app-pizza-detail',
@@ -9,14 +8,11 @@ import { PizzaService } from '../shared/services/pizza.service';
 })
 export class PizzaDetailComponent implements OnInit {
 
-  public currentPizza: Pizza; 
+  @Input() pizza = null; 
 
-  constructor(private pizzaService: PizzaService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.pizzaService.pizza.subscribe((pizza: Pizza) =>{
-      this.currentPizza = pizza;
-    });
   }
 
 }
